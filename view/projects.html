@@ -1,188 +1,93 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <link rel="icon" type="image/x-icon" href="../img/ficon.png" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.05" />
-  <meta name="description" content="Sección que funciona a modo de galería de proyectos" />
-  <meta name="keywords" content="web,developer,desarrollo,agile,proyectos,frontend,fullstack" />
-  <meta name="author" content="Nicolás Jorge" />
-  <meta name="robots" content="index, follow" />
-  <meta property="og:locale" content="es_UY" />
-  <title>MandaleStart | Web Developer</title>
-  <link rel="stylesheet" href="../css/main.css" />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-  />
-</head>
+<section class="main container py-5">
+    <h2>Proyectos</h2>
 
-<body>
-  <!--  NAVBAR -->
-  <header class="navbar">
-    <div class="nav-container">
-      <a href="/index.html" class="logo">Mandale<span>Start</span></a>
-      <nav class="nav-links" id="menu">
-        <a href="/index.html" class="active">Inicio</a>
-        <a href="/view/projects.html">Proyectos</a>
-        <a href="/view/aboutme.html">Sobre mí</a>
-        <a href="/view/contacts.html">Contacto</a>
-      </nav>
-      <button class="nav-toggle" id="menu-btn"><i class="fas fa-bars"></i></button>
-    </div>
-  </header>
+    <div id="projects-container" class="service-grid d-flex flex-wrap gap-4"></div>
 
-  <!-- MAIN -->
-  <main class="main">
-    <section class="services">
-      <h2>Proyectos</h2>
-      <div class="service-grid">
-        <!-- Tarjeta 1 -->
-        <div class="card">
-          <img src="../img/e_commerce/ecommerce.jpg" alt="E-commerce JAP2022" />
-          <h3>E-commerce: JAP2022</h3>
-          <p>Página de comercio online basada en HTML, CSS, Bootstrap y JS para el programa Jóvenes a Programar 2022.</p>
-          <a href="../view/001.html" class="cta">Más información</a>
-        </div>
+    <script>
+        window.projects = window.projects || [
+            {
+                img: "../img/e_commerce/ecommerce.jpg",
+                title: "E-commerce: JAP2022",
+                desc: "Página de comercio online basada en HTML, CSS, Bootstrap y JS para el programa Jóvenes a Programar 2022.",
+                link: "../view/jap2022.html",
+                disabled: false
+            },
+            {
+                img: "../img/personal_website/personalweb.png",
+                title: "Página Web Personal",
+                desc: "Página web personal basada en HTML, CSS, Bootstrap y JS.",
+                link: "../view/personal-web.html",
+                disabled: false
+            },
+            {
+                img: "../img/e_commerce_farma/farma.png",
+                title: "E-commerce: Farmacia",
+                desc: "Descripción de ejemplo.",
+                link: "#",
+                disabled: true
+            },
+            {
+                img: "../img/videogame_web/videojuego.png",
+                title: "Videojuego Web",
+                desc: "Videojuego básico en navegador.",
+                link: "#",
+                disabled: true
+            }
+        ];
 
-        <!--  Tarjeta 2 -->
-        <div class="card">
-          <img src="../img/personal_website/personalweb.png" alt="Web personal" />
-          <h3>Página Web Personal</h3>
-          <p>Página web personal basada en HTML, CSS, Bootstrap y JS.</p>
-          <a href="../view/002.html" class="cta">Más información</a>
-        </div>
+        function loadProjects() {
+            const container = document.getElementById("projects-container");
+            if (!container) return;
 
-        <!-- Tarjeta 3 -->
-        <div class="card">
-          <img src="../img/e_commerce_farma/farma .png" alt="E-commerce Farmacia" />
-          <h3>E-commerce: Farmacia</h3>
-          <p>Descripción de ejemplo.</p>
-          <a href="#" class="cta disabled">Próximamente</a>
-        </div>
+            container.innerHTML = ""; // limpiar contenido previo
 
-        <!-- Tarjeta 4 -->
-        <div class="card">
-          <img src="../img/videogame_web/videojuego.png" alt="Videojuego web" />
-          <h3>Videojuego Web</h3>
-          <p>Videojuego básico en navegador.</p>
-          <a href="#" class="cta disabled">Próximamente</a>
-        </div>
+            window.projects.forEach(proj => {
+                const card = document.createElement("div");
+                card.classList.add("card", "d-flex", "flex-column");
+                card.style.width = "18rem"; // tamaño fijo de tarjeta
+                card.style.minHeight = "350px"; // altura mínima para alinear botones
 
-        <!--  Tarjeta 5 -->
-        <div class="card">
-          <img src="../img/videogame_web/videojuego_online.png" alt="Videojuego online" />
-          <h3>Videojuego Web Online</h3>
-          <p>Videojuego multijugador en navegador.</p>
-          <a href="#" class="cta disabled">Próximamente</a>
-        </div>
+                card.innerHTML = `
+                    <img src="${proj.img}" alt="${proj.title}" class="card-img-top" />
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">${proj.title}</h5>
+                        <p class="card-text flex-grow-1">${proj.desc}</p>
+                        <a 
+                          ${proj.disabled ? 'aria-disabled="true"' : `data-page="${proj.link}" data-link`} 
+                          class="btn btn-warning mt-auto ${proj.disabled ? 'disabled' : ''}">
+                            ${proj.disabled ? "Próximamente" : "Más información"}
+                        </a>
+                    </div>
+                `;
 
-        <!-- Tarjetas de ejemplo repetidas -->
-        <div class="card">
-          <img src="../img/e_commerce/ecommerce.jpg" alt="Ejemplo" />
-          <h3>EJEMPLO</h3>
-          <p>Descripción de ejemplo.</p>
-          <a href="#" class="cta disabled">Próximamente</a>
-        </div>
+                container.appendChild(card);
+            });
+        }
 
-        <div class="card">
-          <img src="../img/e_commerce/ecommerce.jpg" alt="Ejemplo" />
-          <h3>EJEMPLO</h3>
-          <p>Descripción de ejemplo.</p>
-          <a href="#" class="cta disabled">Próximamente</a>
-        </div>
+        loadProjects();
+    </script>
 
-        <div class="card">
-          <img src="../img/e_commerce/ecommerce.jpg" alt="Ejemplo" />
-          <h3>EJEMPLO</h3>
-          <p>Descripción de ejemplo.</p>
-          <a href="#" class="cta disabled">Próximamente</a>
-        </div>
+    <style>
+        /* Para tarjetas y botones */
+        #projects-container .card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-color: #111;
+            color: white;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.3);
+        }
 
-        <div class="card">
-          <img src="../img/e_commerce/ecommerce.jpg" alt="Ejemplo" />
-          <h3>EJEMPLO</h3>
-          <p>Descripción de ejemplo.</p>
-          <a href="#" class="cta disabled">Próximamente</a>
-        </div>
+        #projects-container .card img {
+            object-fit: cover;
+            height: 180px;
+        }
 
-        <div class="card">
-          <img src="../img/e_commerce/ecommerce.jpg" alt="Ejemplo" />
-          <h3>EJEMPLO</h3>
-          <p>Descripción de ejemplo.</p>
-          <a href="#" class="cta disabled">Próximamente</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <section class="footer-content">
-      <div class="footer-links">
-        <h6>Links útiles</h6>
-        <p><a href="../index.html">Inicio</a></p>
-        <p><a href="../view/projects.html">Proyectos</a></p>
-        <p><a href="../view/aboutme.html">Sobre mí</a></p>
-        <p><a href="../view/contacts.html">Contacto</a></p>
-      </div>
-
-      <div class="footer-contact">
-        <h6>Contacto</h6>
-        <p><i class="fas fa-home"></i> Canelones, Uruguay</p>
-        <p><i class="fas fa-envelope"></i> info@mandalestart.com</p>
-        <p><i class="fas fa-phone"></i> +598 91 598 586</p>
-      </div>
-
-      <div class="footer-contact">
-        <h6>Redes sociales</h6>
-        <div class="footer-links">
-          <p><a href="https://www.instagram.com/_nico_jorge" target="_blank"><i class="fab fa-instagram"></i> _nico_jorge</a></p>
-          <p><a href="https://www.linkedin.com/in/mandalestart" target="_blank"><i class="fab fa-linkedin"></i> mandalestart</a></p>
-          <p><a href="https://github.com/MandaleStart" target="_blank"><i class="fab fa-github"></i> mandalestart</a></p>
-          <p><a href="https://twitter.com/mandalestart" target="_blank"><i class="fab fa-twitter"></i> mandalestart</a></p>
-        </div>
-      </div>
-    </section>
-
-    <div class="footer-bottom">
-      <button class="tyc-btn" id="open-modal">Términos y condiciones de privacidad</button>
-      <p>
-        © 2023 Copyright:
-        <a href="https://mandalestart.com/">MandaleStart.com</a> by Nicolás Jorge
-      </p>
-    </div>
-  </footer>
-
-  <!--  Modal -->
-  <div class="modal" id="TyC">
-    <div class="modal-content">
-      <h3>Términos y condiciones de privacidad</h3>
-      <p>
-        Al utilizar nuestro sitio web, acepta nuestra política de privacidad, que incluye el uso de cookies y la
-        recopilación de información para mejorar su experiencia en el sitio. No venderemos ni compartiremos su
-        información con terceros sin su consentimiento.
-      </p>
-      <button class="close-btn" id="close-modal">Cerrar</button>
-    </div>
-  </div>
-
-  <script>
-    //  Lógica del menú responsive
-    const menuBtn = document.getElementById('menu-btn');
-    const menu = document.getElementById('menu');
-    menuBtn.addEventListener('click', () => menu.classList.toggle('open'));
-
-    //  Lógica del modal
-    const modal = document.getElementById('TyC');
-    const openBtn = document.getElementById('open-modal');
-    const closeBtn = document.getElementById('close-modal');
-    openBtn.addEventListener('click', () => modal.classList.add('show'));
-    closeBtn.addEventListener('click', () => modal.classList.remove('show'));
-    window.addEventListener('click', (e) => {
-      if (e.target === modal) modal.classList.remove('show');
-    });
-  </script>
-</body>
-</html>
+        #projects-container .card .btn.disabled {
+            pointer-events: none;
+            opacity: 0.6;
+        }
+    </style>
+</section>

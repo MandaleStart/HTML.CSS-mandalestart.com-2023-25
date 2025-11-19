@@ -1,130 +1,69 @@
-<!DOCTYPE html>
-<html lang="es">
+<section class="main-about container py-5">
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="icon" type="image/x-icon" href="../img/ficon.png">
-  <meta name="viewport" content="width=device-width, initial-scale=1.05">
-  <meta name="description" content="Un aboutme para que me conozcas un poco mas">
-  <meta name="keywords" content="web,developer,desarrollo">
-  <meta name="author" content="Nicolas Jorge">
-  <meta name="robots" content="index, follow">
-  <meta property="og:locale" content="es_UY">
-  <title>MandaleStart | Web Developer</title>
-  <link rel="stylesheet" href="../css/main.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-</head>
+  <div class="row align-items-center justify-content-center text-center text-md-start">
 
-<body>
-  <!-- NAVBAR -->
-  <header class="navbar">
-    <div class="nav-container">
-      <a href="../index.html" class="logo">Mandale<span>Start</span></a>
-      <nav class="nav-links" id="menu">
-        <a href="../index.html">Inicio</a>
-        <a href="../view/contacts.html">Contactame</a>
-        <a href="../view/projects.html">Proyectos</a>
-        <a href="../view/aboutme.html" class="active">Sobre mí</a>
-      </nav>
-      <button class="nav-toggle" id="menu-btn"><i class="fas fa-bars"></i></button>
-    </div>
-  </header>
-
-  <!-- MAIN ABOUT -->
-  <main class="main-about">
-    <div class="content">
-      <!-- Imagen perfil -->
-      <section>
-        <div class="bg_perfil"></div>
-        <img src="../img/img_perfil.png" alt="foto personal" class="imgp">
-        <div class="bg_perfil"></div>
-      </section>
-
-      <!-- Texto -->
-      <section id="am_text">
-        <h1>¿Quién soy?</h1>
-        <p>Hola me llamo Nicolás, un joven desarrollador web con una pasión por crear soluciones digitales atractivas y eficientes.</p>
-        <p>Después de completar un curso en desarrollo web, tengo una sólida comprensión de las tecnologías web, incluyendo HTML, CSS y JavaScript.</p>
-        <p>Me apasiona el diseño y la experiencia de usuario, y siempre busco maneras de hacer que mi trabajo sea atractivo y accesible para todos los usuarios.</p>
-        <p>Además de mi formación técnica, también tengo una mentalidad de trabajo en equipo y colaboración.</p>
-        <p>Me gusta trabajar con otros desarrolladores, diseñadores y stakeholders para comprender sus necesidades y crear soluciones personalizadas que se ajusten a sus requisitos.</p>
-        <p>Soy un buen comunicador y siempre estoy dispuesto a escuchar y aprender de mis colegas.</p>
-        <p>En mi tiempo libre, me encanta experimentar con nuevas tecnologías y mejorar mis habilidades en línea.</p>
-        <p>También disfruto de la fotografía y la exploración urbana.</p>
-        <p>Estoy emocionado de empezar a trabajar en proyectos innovadores que tengan un impacto positivo en la sociedad.</p>
-        <p>Y estoy abierto a nuevas oportunidades y desafíos, además de ansioso de ver a dónde me llevará mi carrera en el futuro.</p>
-      </section>
-    </div>
-
-    <!-- BANNER FINAL -->
-    <div class="banner">
-      <h1>...y ahora, ¿hablamos de ti y tu proyecto?</h1>
-      <a href="../view/contacts.html">VAMOS</a>
-    </div>
-  </main>
-
-  <!-- FOOTER -->
-  <footer>
-    <!-- Redes sociales -->
-    <div class="social">
-      <span>Conéctate en las redes sociales:</span>
-      <a href="https://www.instagram.com/_nico_jorge" target="_blank"><i class="fab fa-instagram"></i> _nico_jorge</a>
-      <a href="https://www.linkedin.com/in/mandalestart" target="_blank"><i class="fab fa-linkedin"></i> mandalestart</a>
-      <a href="https://github.com/MandaleStart" target="_blank"><i class="fab fa-github"></i> mandalestart</a>
-      <a href="https://twitter.com/mandalestart" target="_blank"><i class="fab fa-twitter"></i> mandalestart</a>
-    </div>
-
-    <!-- Links y contacto -->
-    <div class="footer-content">
-      <div class="footer-links">
-        <h6>Links útiles</h6>
-        <p><a href="../index.html">Inicio</a></p>
-        <p><a href="../view/projects.html">Proyectos</a></p>
-        <p><a href="../view/aboutme.html">Sobre mí</a></p>
-        <p><a href="../view/contacts.html">Contacto</a></p>
+    <!-- FOTO + DECORACIÓN -->
+    <section class="col-md-4 mb-4">
+      <div class="profile-wrapper mx-auto">
+        <img src="../img/img_perfil.png" alt="foto personal" class="img-fluid profile-img">
       </div>
-      <div class="footer-contact">
-        <h6>Contacto</h6>
-        <p><i class="fas fa-home"></i> Canelones, Uruguay</p>
-        <p><i class="fas fa-envelope"></i> info@mandalestart.com</p>
-        <p><i class="fas fa-phone"></i> +598 91 598 586</p>
-      </div>
-    </div>
+    </section>
 
-    <!-- Términos y derechos -->
-    <div class="footer-bottom">
-      <button class="tyc-btn" id="open-modal">Términos y condiciones de privacidad</button>
-      <p>© 2023 Copyright: <a href="https://mandalestart.com/">MandaleStart.com</a> by Nicolás Jorge</p>
-    </div>
-  </footer>
+    <!-- TEXTO -->
+    <section id="am_text" class="col-md-7">
+      <h1 class="about-title mb-3">Hola, soy Nicolás 👋</h1>
 
-  <!-- MODAL TyC -->
-  <div class="modal" id="TyC" tabindex="-1">
-    <div class="modal-content">
-      <h3>Términos y condiciones de privacidad</h3>
-      <p>Al utilizar nuestro sitio web, acepta nuestra política de privacidad, que incluye el uso de cookies y la recopilación de información para mejorar su experiencia en el sitio. No venderemos ni compartiremos su información con terceros sin su consentimiento.</p>
-      <button class="close-btn" id="close-modal">Cerrar</button>
-    </div>
+      <p>Soy un desarrollador web apasionado por crear soluciones modernas, fluidas y visualmente atractivas.</p>
+      <p>Me especializo en HTML, CSS, JavaScript y frameworks actuales. Disfruto transformar ideas en interfaces claras, rápidas y fáciles de usar.</p>
+      <p>Busco siempre el equilibrio entre diseño, funcionalidad y experiencia de usuario.</p>
+      <p>Me encanta trabajar en equipo, comunicarme bien y construir proyectos donde cada detalle importa.</p>
+      <p>Además de programar, disfruto explorar nuevas tecnologías, aprender constantemente y perfeccionar mis habilidades creativas como la fotografía.</p>
+      <p>Estoy abierto a nuevos desafíos, colaboraciones y oportunidades donde pueda aportar mi visión y seguir creciendo profesionalmente.</p>
+    </section>
+
   </div>
 
-  <!-- JS MENU & MODAL -->
-  <script>
-    // Toggle Navbar
-    const menuBtn = document.getElementById("menu-btn");
-    const navLinks = document.getElementById("menu");
-    menuBtn.addEventListener("click", () => {
-      navLinks.classList.toggle("open");
-    });
+  <!-- SECCIÓN DE HABILIDADES -->
+  <section class="skills-section mt-5">
+    <div class="row">
 
-    // Modal
-    const openModal = document.getElementById("open-modal");
-    const modal = document.getElementById("TyC");
-    const closeModal = document.getElementById("close-modal");
+      <!-- HABILIDADES DURAS -->
+      <div class="col-md-6 mb-4">
+        <h2 class="skills-title text-center mb-3">Habilidades Duras 💻</h2>
+        <ul class="skills-list">
+          <li><strong>HTML5 / CSS3 / JavaScript</strong></li>
+          <li>Responsive Design & UI/UX</li>
+          <li>ReactJs (componentes, hooks, context)</li>
+          <li>Node.js / Express</li>
+          <li>Firebase (Auth, Firestore, Storage)</li>
+          <li>Git & Control de versiones</li>
+          <li>SQL / NoSQL</li>
+          <li>Consumo de APIs REST</li>
+         
+        </ul>
+      </div>
 
-    openModal.addEventListener("click", () => modal.classList.add("show"));
-    closeModal.addEventListener("click", () => modal.classList.remove("show"));
-    window.addEventListener("click", e => { if(e.target === modal) modal.classList.remove("show"); });
-  </script>
-</body>
-</html>
+      <!-- HABILIDADES BLANDAS -->
+      <div class="col-md-6 mb-4">
+        <h2 class="skills-title text-center mb-3">Habilidades Blandas 🤝</h2>
+        <ul class="skills-list">
+          <li>Comunicación clara y efectiva</li>
+          <li>Pensamiento crítico y resolución de problemas</li>
+          <li>Trabajo en equipo y colaboración</li>
+          <li>Gestión del tiempo y organización</li>
+          <li>Orientación a resultados</li>
+          <li>Adaptabilidad y aprendizaje continuo</li>
+          <li>Creatividad para proponer soluciones innovadoras</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <div class="banner about-cta text-center mt-5">
+    <h1 class="mb-3">¿Hablamos de tu proyecto?</h1>
+    <a href="../view/contacts.html" class="cta-btn">VAMOS</a>
+  </div>
+
+</section>
