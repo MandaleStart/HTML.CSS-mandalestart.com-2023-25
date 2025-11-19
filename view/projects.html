@@ -39,13 +39,13 @@
             const container = document.getElementById("projects-container");
             if (!container) return;
 
-            container.innerHTML = ""; // limpiar contenido previo
+            container.innerHTML = "";
 
             window.projects.forEach(proj => {
                 const card = document.createElement("div");
                 card.classList.add("card", "d-flex", "flex-column");
-                card.style.width = "18rem"; // tamaño fijo de tarjeta
-                card.style.minHeight = "350px"; // altura mínima para alinear botones
+                card.style.width = "18rem";
+                card.style.minHeight = "350px"; 
 
                 card.innerHTML = `
                     <img src="${proj.img}" alt="${proj.title}" class="card-img-top" />
