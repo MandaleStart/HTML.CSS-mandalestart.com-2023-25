@@ -501,3 +501,118 @@ footer a:hover {
   object-fit: cover;
   border-radius: 8px;
 }
+
+        /* Para tarjetas y botones */
+        #projects-container .card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-color: #111;
+            color: white;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.3);
+        }
+
+        #projects-container .card img {
+            object-fit: cover;
+            height: 180px;
+        }
+
+        #projects-container .card .btn.disabled {
+            pointer-events: none;
+            opacity: 0.6;
+        }
+
+
+        .service-card {
+  background-color: #111;
+  border: 1px solid #ffc107;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px #ffc10755;
+}
+
+/* Descripción extendida oculta */
+.extra-info {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  color: #ddd;
+}
+
+/* Al pasar el mouse aparece */
+.service-card:hover .extra-info {
+  opacity: 1;
+  max-height: 200px;
+  margin-top: 10px;
+}
+
+/* ---------- TARJETAS ---------- */
+.service-card {
+  background: #111;
+  border: 1px solid #ffc107;
+  border-radius: 10px;
+  padding: 25px;
+  transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* Efectos en hover */
+.service-card:hover {
+  transform: translateY(-12px) scale(1.03);
+  border-color: #ffdd55;
+  box-shadow: 0px 0px 25px #ffc10788;
+}
+
+/* ---------- ÍCONO ---------- */
+.service-card .service-icon {
+  font-size: 48px;
+  color: #ffc107;
+  transition: all 0.35s ease;
+}
+
+.service-card:hover .service-icon {
+  transform: scale(1.25) rotate(-5deg);
+  filter: drop-shadow(0 0 10px #ffc107aa);
+}
+
+/* ---------- TEXTO EXTRA (animación fuerte) ---------- */
+.extra-info {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transform: translateY(20px);
+  transition: 
+      opacity 0.4s ease,
+      max-height 0.45s ease,
+      transform 0.4s ease;
+  color: #e0e0e0;
+  font-size: 0.9rem;
+}
+
+/* Mostrar texto con slide + fade */
+.service-card:hover .extra-info {
+  opacity: 1;
+  max-height: 200px;
+  transform: translateY(0);
+  margin-top: 12px;
+}
+
+/* ---------- HEADINGS ---------- */
+.service-card h3 {
+  transition: color 0.3s ease;
+}
+
+.service-card:hover h3 {
+  color: #ffe27a;
+}
