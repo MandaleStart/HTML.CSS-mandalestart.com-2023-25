@@ -1,0 +1,23 @@
+      body {
+        background-color: #ff8c00;
+        font-family: 'Comic Sans MS', cursive, sans-serif;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+      }
+
+      h1 {
+        font-size: 5rem;
+        margin-top: 5rem;
+      }
+
+      p {
+        font-size: 2rem;
+        margin-top: 2rem;
+      }
+
+      img {
+        margin-top: 5rem;
+        max-width: 100%;
+        height: auto;
+      }
