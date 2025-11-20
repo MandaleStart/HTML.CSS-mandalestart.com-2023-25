@@ -52,3 +52,63 @@
   object-fit: cover;
   border-radius: 50%;
 }
+/*******************
+ * CONTENEDOR
+ *******************/
+.panel-container {
+  background: #0f0f0f;
+  padding: 40px 0;
+  border-radius: 10px;
+}
+
+/*******************
+ * TARJETAS panel
+ *******************/
+.panel-card {
+  background: #1a1a1a;
+  border: 2px solid #3a3a3a;
+  position: relative;
+  padding: 30px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+}
+
+.panel-title {
+  color: #F2C300;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.panel-list li {
+  color: #dcdcdc;
+  padding: 6px 0;
+  font-size: 1.05rem;
+  border-left: 5px solid #F2C300;
+  padding-left: 12px;
+  margin-bottom: 6px;
+}
+
+
+.panel-banner-top {
+  width: 100%;
+  height: 25px;
+  background: linear-gradient(90deg, #F2C300 0%, #d9a900 100%);
+  clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
+  margin-bottom: 20px;
+}
+
+.panel-banner-bottom {
+  width: 100%;
+  height: 25px;
+  background: linear-gradient(90deg, #F2C300 0%, #d9a900 100%);
+  clip-path: polygon(10% 0, 90% 0, 100% 100%, 0 100%);
+  margin-top: 20px;
+}
+
+.panel-card:hover {
+  border-color: #F2C300;
+  box-shadow: 0 0 20px rgba(242,195,0,0.6);
+  transform: translateY(-3px);
+  transition: 0.25s ease;
+}
