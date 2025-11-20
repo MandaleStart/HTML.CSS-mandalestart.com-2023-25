@@ -36,34 +36,57 @@
             }
         ];
 
-
 function loadProjects() {
     const container = document.getElementById("projects-container");
     if (!container) return;
 
     container.innerHTML = "";
 
-    window.projects.forEach(proj => {
+    window.projects.forEach(project => {
+
+        const col = document.createElement("div");
+        col.className = "col-12 col-md-6 col-lg-5 d-flex";
+
+
         const card = document.createElement("div");
-        card.classList.add("card", "d-flex", "flex-column");
-        card.style.width = "18rem";
-        card.style.minHeight = "350px";
+        card.className = "card h-100 flex-fill d-flex flex-column shadow-sm";
 
-        card.innerHTML = `
-                    <img src="${proj.img}" alt="${proj.title}" class="card-img-top" />
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">${proj.title}</h5>
-                        <p class="card-text flex-grow-1">${proj.desc}</p>
-                        <a 
-                          ${proj.disabled ? 'aria-disabled="true"' : `href="${proj.link}" data-link`} 
-                          class="btn btn-warning mt-auto ${proj.disabled ? 'disabled' : ''}">
-                            ${proj.disabled ? "Próximamente" : "Más información"}
-                        </a>
-                    </div>
-                `;
 
-        container.appendChild(card);
+        const img = document.createElement("img");
+        img.src = project.img;
+        img.alt = project.title;
+        img.className = "card-img-top";
+
+
+        const body = document.createElement("div");
+        body.className = "card-body d-flex flex-column";
+
+        const title = document.createElement("h5");
+        title.className = "card-title";
+        title.textContent = project.title;
+
+        const desc = document.createElement("p");
+        desc.className = "card-text flex-grow-1";
+        desc.textContent = project.desc;
+
+
+        const button = document.createElement("a");
+        button.className = `btn btn-warning mt-auto ${project.disabled ? "disabled" : ""}`;
+        button.textContent = project.disabled ? "Próximamente" : "Más información";
+
+        if (!project.disabled) {
+            button.href = project.link;
+            button.setAttribute("data-link", "");
+        } else {
+            button.setAttribute("aria-disabled", "true");
+        }
+
+        body.append(title, desc, button);
+        card.append(img, body);
+        col.append(card);
+        container.append(col);
     });
 }
 
+// Ejecutar el render
 loadProjects();
