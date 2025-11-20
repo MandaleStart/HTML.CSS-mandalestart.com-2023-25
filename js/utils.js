@@ -16,7 +16,7 @@
             {
                 img: "../img/e_commerce_farma/farma.png",
                 title: "E-commerce: Farmacia",
-                desc: "Descripción de ejemplo.",
+                desc: "Sitio web Ecommerce de Farmacia con base de datos y gestion de productos y usuarios .",
                 link: "#",
                 disabled: true
             },
@@ -25,6 +25,13 @@
                 title: "Videojuego Web",
                 desc: "Videojuego básico en navegador.",
                 link: "../view/vgame_web.html",
+                disabled: true
+            },
+            {
+                img: "../img/java/java_inventario.png",
+                title: "Java : inventario",
+                desc: "Programa escrito en java para gestion de libros y equipos",
+                link: "../view/java_inventario.html",
                 disabled: true
             }
         ];
