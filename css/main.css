@@ -360,22 +360,21 @@ footer a:hover {
   text-shadow: 0 0 10px rgba(255, 230, 0, 0.5);
 }
 
-/* Estilos para los inputs del formulario */
 .ws_box form input,
 .ws_box form select,
 .ws_box form textarea {
   width: 100%;
-  /* Ocupa todo el ancho del contenedor */
+
   padding: 10px 12px;
-  /* Espaciado interno */
+
   margin-top: 5px;
   margin-bottom: 15px;
   border-radius: 8px;
-  /* Bordes redondeados */
+
   border: 1px solid #ccc;
-  /* Borde gris claro */
+
   background-color: #1a1a1a;
-  /* Fondo oscuro acorde al tema */
+
   color: #fff;
   font-size: 0.95rem;
   transition: all 0.2s ease-in-out;
