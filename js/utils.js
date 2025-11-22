@@ -1,6 +1,6 @@
         window.projects = window.projects || [
             {
-                img: "../img/e_commerce/ecommerce.jpg",
+                img: "../../img/e_commerce/ecommerce.jpg",
                 title: "E-commerce: JAP2022",
                 desc: "Página de comercio online basada en HTML, CSS, Bootstrap y JS para el programa Jóvenes a Programar 2022.",
                 link: "../view/jap2022.html",
