@@ -1,34 +1,34 @@
         window.projects = window.projects || [
             {
-                img: "../../img/e_commerce/ecommerce.jpg",
+                img: "img\e_commerce\ecommerce.jpg",
                 title: "E-commerce: JAP2022",
                 desc: "Página de comercio online basada en HTML, CSS, Bootstrap y JS para el programa Jóvenes a Programar 2022.",
                 link: "../view/jap2022.html",
                 disabled: false
             },
             {
-                img: "../img/personal_website/personalweb.png",
+                img: "img/personal_website/personalweb.png",
                 title: "Página Web Personal",
                 desc: "Página web personal basada en HTML, CSS, Bootstrap y JS.",
                 link: "../view/personal-web.html",
                 disabled: false
             },
             {
-                img: "../img/java/java_inventario.png",
+                img: "img/java/java_inventario.png",
                 title: "Java : inventario",
                 desc: "Programa escrito en java para gestion de libros y equipos",
                 link: "../view/java_inventario.html",
                 disabled: false
             },
             {
-                img: "../img/e_commerce_farma/farma.png",
+                img: "img/e_commerce_farma/farma.png",
                 title: "E-commerce: Farmacia",
                 desc: "Sitio web Ecommerce de Farmacia con base de datos y gestion de productos y usuarios .",
                 link: "#",
                 disabled: true
             },
             {
-                img: "../img/videogame_web/videojuego.png",
+                img: "img/videogame_web/videojuego.png",
                 title: "Videojuego Web",
                 desc: "Videojuego básico en navegador.",
                 link: "../view/vgame_web.html",
