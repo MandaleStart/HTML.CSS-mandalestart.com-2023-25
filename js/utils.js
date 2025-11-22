@@ -75,7 +75,7 @@ function loadProjects() {
         button.textContent = project.disabled ? "Próximamente" : "Más información";
 
         if (!project.disabled) {
-            button.href = project.link;
+            button.href = "https://mandalestart.com/" + project.link;
             button.setAttribute("data-link", "");
         } else {
             button.setAttribute("aria-disabled", "true");
