@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://mandalestart.com/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://mandalestart.com/view/home.html</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://mandalestart.com/view/projects.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://mandalestart.com/view/contacto.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://mandalestart.com/view/aboutme.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://mandalestart.com/view/404.html</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://mandalestart.com/view/vgame_web.html</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://mandalestart.com/view/jap2022.html</loc>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://mandalestart.com/view/java_inventario.html</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://mandalestart.com/view/sobre-mi.html</loc>
+    <priority>0.6</priority>
+  </url>
+
+
+  <url>
+    <loc>https://mandalestart.com/view/personal-web.html</loc>
+    <priority>0.6</priority>
+  </url>
+</urlset>
