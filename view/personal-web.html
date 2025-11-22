@@ -5,31 +5,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="Inicio de mi web personal — MandaleStart">
-  <meta name="keywords" content="web, developer, fullstack, diseño web, software">
+  <meta name="description" content="Proyecto: Sitio Web Personal — MandaleStart">
+  <meta name="keywords" content="web, developer, fullstack, portfolio, diseño web, software">
   <meta name="author" content="Nicolas Jorge">
   <meta name="robots" content="index, follow">
 
   <meta property="og:title" content="MandaleStart | Desarrollo Web a medida">
   <meta property="og:locale" content="es_UY">
 
-  <title>MandaleStart | Desarrollo Web a Medida</title>
+  <title>MandaleStart | Sitio Web Personal</title>
 
-  <link rel="icon" type="image/x-icon" href="./img/ficon.png">
+  <link rel="icon" type="image/x-icon" href="../img/ficon.png">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="../css/main.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
 </head>
 
 <body class="bg-black text-warning">
 
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-warning">
   <div class="container-fluid">
 
-    <a class="navbar-brand text-warning fw-bold" href="./view/home.html">
+    <a class="navbar-brand text-warning fw-bold" href="./home.html">
       MandaleStart
     </a>
 
@@ -41,41 +40,43 @@
       <ul class="navbar-nav ms-auto">
 
         <li class="nav-item">
-          <a class="nav-link text-warning" href="./view/home.html">Inicio</a>
+          <a class="nav-link text-warning" href="./home.html">Inicio</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link text-warning" href="./view/contacto.html">Contactame</a>
+          <a class="nav-link text-warning" href="./contacto.html">Contactame</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link text-warning" href="./view/projects.html">Proyectos</a>
+          <a class="nav-link text-warning" href="./projects.html">Proyectos</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link text-warning" href="./view/aboutme.html">Sobre mí</a>
+          <a class="nav-link text-warning" href="./aboutme.html">Sobre mí</a>
         </li>
 
       </ul>
     </div>
   </div>
 </nav>
-<main class="container py-5 text-white">
-  <div class="row g-4">
-    <!-- Columna de Carrusel -->
-    <div class="col-lg-6 col-12">
-      <h1 class="mb-4">Proyecto 2: Sitio Web Personal</h1>
+
+<main class="container my-5 text-white">
+
+  <h1 class="mb-4">Proyecto 2: Sitio Web Personal</h1>
+
+  <div class="row">
+
+    <div class="col-lg-6 col-12 mb-4">
       <div id="personalSiteCarousel" class="carousel slide" data-bs-ride="carousel">
-        <!-- Indicadores -->
+
         <div class="carousel-indicators">
-          <button type="button" data-bs-target="#personalSiteCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+          <button type="button" data-bs-target="#personalSiteCarousel" data-bs-slide-to="0" class="active"></button>
           <button type="button" data-bs-target="#personalSiteCarousel" data-bs-slide-to="1"></button>
           <button type="button" data-bs-target="#personalSiteCarousel" data-bs-slide-to="2"></button>
           <button type="button" data-bs-target="#personalSiteCarousel" data-bs-slide-to="3"></button>
         </div>
 
-        <!-- Imágenes del carrusel -->
-        <div class="carousel-inner rounded shadow">
+        <div class="carousel-inner rounded shadow-sm">
           <div class="carousel-item active">
             <img src="../img/personal_website/personal_site_1.png" class="d-block w-100" alt="Página principal">
           </div>
@@ -86,41 +87,101 @@
             <img src="../img/personal_website/personal_site_3.png" class="d-block w-100" alt="Sección de contacto">
           </div>
           <div class="carousel-item">
-            <img src="../img/personal_website/personal_site_4.png" class="d-block w-100" alt="Galería de fotos">
+            <img src="../img/personal_website/personal_site_4.png" class="d-block w-100" alt="Galería">
           </div>
         </div>
 
-        <!-- Controles -->
         <button class="carousel-control-prev" type="button" data-bs-target="#personalSiteCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="carousel-control-prev-icon"></span>
           <span class="visually-hidden">Anterior</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#personalSiteCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="carousel-control-next-icon"></span>
           <span class="visually-hidden">Siguiente</span>
         </button>
+
       </div>
     </div>
 
-    <!-- Columna de Descripción -->
     <div class="col-lg-6 col-12">
-      <div class="p-3 bg-dark rounded shadow">
-        <p>Un proyecto de desarrollo web para una página personal implica crear un sitio que sirva como plataforma para compartir información sobre uno mismo, intereses y actividades.</p>
-        <ol>
-          <li><b>Requerimientos:</b> Objetivos, contenido y funcionalidades del sitio.</li>
-          <li><b>Diseño UI/UX:</b> Interfaz atractiva, colores, tipografía e identidad personal.</li>
-          <li><b>Desarrollo:</b> HTML, CSS, JS, Bootstrap y CMS si aplica.</li>
-          <li><b>Pruebas:</b> Validación de navegación y funcionamiento responsive.</li>
-          <li><b>Lanzamiento:</b> Deploy y seguimiento de mejoras según comentarios.</li>
-          <li><b>Promoción:</b> SEO, redes sociales y difusión del contenido.</li>
+      <div class="ws_box p-4 mb-3 shadow-sm bg-dark rounded">
+        <p>
+          Este proyecto consiste en un sitio web personal diseñado para mostrar información,
+          proyectos, redes sociales y contenido relevante sobre el usuario.
+        </p>
+
+        <ol class="ps-3">
+          <li><b>Requerimientos:</b> Objetivos, contenido y funcionalidades deseadas.</li>
+          <li><b>Diseño UI/UX:</b> Colores, identidad personal, accesibilidad y estructura.</li>
+          <li><b>Desarrollo:</b> HTML, CSS, JS, Bootstrap y librerías asociadas.</li>
+          <li><b>Pruebas:</b> Compatibilidad móvil y experiencia de usuario.</li>
+          <li><b>Lanzamiento:</b> Deploy, SEO y análisis de visitas.</li>
+          <li><b>Promoción:</b> Redes sociales, refuerzo visual y branding.</li>
         </ol>
-        <div class="d-flex gap-3 mt-4 justify-content-center flex-wrap">
-          <a href="../view/contacto.html" class="btn btn-success">ESCRIBEME Y DESAROLLEMOS ESA IDEA</a>
-          <a href="../view/projects.html" class="btn btn-danger">BUSCAR OTRO TIPO DE WEB</a>
-        </div>
+      </div>
+
+      <div class="d-flex gap-3 flex-wrap">
+        <a href="./contacto.html" class="btn btn-outline-warning flex-fill fw-bold py-3">
+          ESCRIBIME Y DESARROLLEMOS ESA IDEA
+        </a>
+
+        <a href="./projects.html" class="btn btn-outline-light flex-fill fw-bold py-3">
+          BUSCAR OTRO TIPO DE WEB
+        </a>
       </div>
     </div>
+
   </div>
+
+  <section class="mt-5">
+    <h3 class="text-warning mb-4">Tecnologías utilizadas</h3>
+
+    <div class="row g-4">
+
+      <div class="col-6 col-md-3">
+        <div class="bg-dark text-center p-4 rounded border border-warning h-100">
+          <i class="fab fa-html5 fa-2x text-warning mb-2"></i>
+          <h6>HTML5</h6>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3">
+        <div class="bg-dark text-center p-4 rounded border border-warning h-100">
+          <i class="fab fa-css3-alt fa-2x text-warning mb-2"></i>
+          <h6>CSS3</h6>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3">
+        <div class="bg-dark text-center p-4 rounded border border-warning h-100">
+          <i class="fab fa-js-square fa-2x text-warning mb-2"></i>
+          <h6>JavaScript</h6>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3">
+        <div class="bg-dark text-center p-4 rounded border border-warning h-100">
+          <i class="fab fa-bootstrap fa-2x text-warning mb-2"></i>
+          <h6>Bootstrap 5</h6>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="mt-5">
+    <div class="bg-secondary text-white p-4 rounded shadow-sm">
+      <h3 class="text-warning mb-3">Lo que aprendí en este proyecto</h3>
+
+      <ul class="mb-0">
+        <li>Definir una identidad visual clara y profesional.</li>
+        <li>Diseñar estructura de un sitio personal moderno.</li>
+        <li>Optimizar tiempos de carga y accesibilidad.</li>
+        <li>Implementar buenas prácticas SEO.</li>
+      </ul>
+    </div>
+  </section>
+
 </main>
 
 <footer class="bg-black text-warning pt-4 border-top border-warning">
@@ -150,6 +211,7 @@
   </section>
 </footer>
 
+
 <div class="modal fade" id="TyC" tabindex="-1">
   <div class="modal-dialog">
     <div class="modal-content bg-black text-warning border-warning">
@@ -171,4 +233,3 @@
 </body>
 
 </html>
-
